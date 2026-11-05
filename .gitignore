@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+release/
+src-tauri/gen/
+gameoflife-data/
+*.log
+.DS_Store
+src/wasm/pkg/

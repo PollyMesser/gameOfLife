@@ -1,0 +1,15 @@
+[package]
+name = "life-engine"
+version = "0.1.0"
+edition = "2021"
+description = "Zellulaere Automaten: Life-like, Generations, Larger than Life (Moore / Von Neumann / Hex)"
+
+[features]
+default = ["parallel"]
+# Mehrkern-Simulation mit rayon (Desktop). Fuer WebAssembly abschalten.
+parallel = ["dep:rayon"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+rayon = { version = "1", optional = true }
+fastrand = "2"
